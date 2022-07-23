@@ -1,0 +1,23 @@
+/* #login-form {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 20%;
+  border-style: solid;
+  border-width: thin;
+  padding: 20px;
+} */
+#login-form {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 150px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: thin;
+  padding: 40px;
+  /* overflow-y: hidden; */
+  /* position: absolute; */
+}
+
+.h1 {
+  display: inline-block;
+}

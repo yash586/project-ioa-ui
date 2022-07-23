@@ -1,0 +1,11 @@
+#Sign-Up-form {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: thin;
+  padding: 40px;
+  /* overflow-y: hidden; */
+  /* position: absolute; */
+}

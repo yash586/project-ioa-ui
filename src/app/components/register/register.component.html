@@ -1,0 +1,148 @@
+<div id="Sign-Up-form">
+  <form (ngSubmit)="onSubmit()" #SignUpform="ngForm">
+    <h3>Sign-Up</h3>
+    <div class="mb-3 form-group">
+      <div class="form-control">
+        <label class="form-label">Type of User</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="type"
+            value="Customer"
+            [(ngModel)]="type"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Customer
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="type"
+            value="Employee"
+            [(ngModel)]="type"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Employee
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 form-group">
+      <label for="InputName" class="form-label">First Name</label>
+      <input
+        type="firstName"
+        class="form-control"
+        id="firstNameInput"
+        [(ngModel)]="firstName"
+        name="firstName"
+        #firstNameInput="ngModel"
+        required
+      />
+      <div
+        [hidden]="firstNameInput.valid || firstNameInput.pristine"
+        class="alert alert-danger"
+      >
+        First Name is required
+      </div>
+    </div>
+
+    <div class="mb-3 form-group">
+      <label for="InputName" class="form-label">Last Name</label>
+      <input
+        type="lastName"
+        class="form-control"
+        id="lasttNameInput"
+        [(ngModel)]="lastName"
+        name="lastName"
+        #lastNameInput="ngModel"
+        required
+      />
+      <div
+        [hidden]="lastNameInput.valid || lastNameInput.pristine"
+        class="alert alert-danger"
+      >
+        Last Name is required
+      </div>
+    </div>
+
+    <div class="mb-3 form-group">
+      <label for="dateOfBirth" class="form-label">Date Of Birth</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dateOFBirthInput"
+        [(ngModel)]="dateofbirth"
+        name="dateofbirth"
+        #dateOfBirth="ngModel"
+        required
+      />
+      <div
+        [hidden]="dateOfBirth.valid || dateOfBirth.pristine"
+        class="alert alert-danger"
+      >
+        Date of Birth is required
+      </div>
+    </div>
+
+    <div class="mb-3 form-group">
+      <label for="InputNumber" class="form-label">Phone Number</label>
+      <input
+        type="integer"
+        class="form-control"
+        id="numberInput"
+        [(ngModel)]="phoneNumber"
+        name="phoneNumber"
+        #phoneNumberInput="ngModel"
+        required
+      />
+      <div
+        [hidden]="phoneNumberInput.valid || phoneNumberInput.invalid"
+        class="alert alert-danger"
+      >
+        Phone Number is required
+      </div>
+    </div>
+
+    <div class="mb-3 form-group">
+      <label for="InputEmail" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="signUpFormInputEmail"
+        [(ngModel)]="username"
+        name="username"
+        #usernameInput="ngModel"
+        required
+      />
+      <div
+        [hidden]="usernameInput.valid || usernameInput.pristine"
+        class="alert alert-danger"
+      >
+        Username is required
+      </div>
+    </div>
+    <div class="mb-3 form-group">
+      <label for="InputPassword" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="signUpFormInputPassword"
+        name="password"
+        [(ngModel)]="password"
+        #passwordInput="ngModel"
+        required
+      />
+      <div
+        [hidden]="passwordInput.valid || passwordInput.pristine"
+        class="alert alert-danger"
+      >
+        Password is required
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

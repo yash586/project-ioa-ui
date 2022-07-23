@@ -1,0 +1,54 @@
+<div id="dashboard">
+  <form (ngSubmit)="onSubmit()" #dashboard="ngForm">
+    <h1>Hello {{ name }} {{ lastName }}</h1>
+    <div class="mb-3 form-group">
+      <label for="operation" class="form-control">Choose Operations</label>
+      <select id="operation" name="operation" [(ngModel)]="operation">
+        <option value="transfer" selected>Transfer</option>
+        <option value="bill_pay" selected>Bill Pay</option>
+      </select>
+    </div>
+    <div class="mb-3 form-group">
+      <label for="amount" class="form-label">Amount</label>
+      <input
+        type="amount"
+        class="form-control"
+        id="amount"
+        [(ngModel)]="amount"
+        name="amount"
+        #amountValue="ngModel"
+        required
+      />
+      <div
+        [hidden]="amountValue.valid || amountValue.pristine"
+        class="alert alert-danger"
+      >
+        Amount is required
+      </div>
+    </div>
+
+    <div class="mb-3 form-group">
+      <label for="accnumber" class="form-label">Account Number</label>
+      <input
+        type="accnumber"
+        class="form-control"
+        id="accnumber"
+        [(ngModel)]="accnumber"
+        name="accnumber"
+        #accountNumber="ngModel"
+        required
+      />
+      <div
+        [hidden]="accountNumber.valid || accountNumber.pristine"
+        class="alert alert-danger"
+      >
+        Account Number is mandatory
+      </div>
+    </div>
+    <app-button [text]="'Submit'" [btnClass]="'btn-primary'"></app-button>
+    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+  </form>
+  <!-- <button type="logout" (click)="logout()" class="btn btn-success">
+    Logout
+  </button> -->
+</div>
