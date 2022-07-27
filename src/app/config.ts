@@ -1,1 +1,1 @@
-export const api_url = 'https://ioa-bank.herokuapp.com/';
+export const api_url = 'https://ioa-bank.herokuapp.com';
